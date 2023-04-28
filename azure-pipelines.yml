@@ -13,13 +13,13 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'arm'
+    azureResourceManagerConnection: 'arm01'
     subscriptionId: 'f9a97bb3-dd76-42ce-b3d4-d0b8c761f90d'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'arm_01'
     location: 'Central india'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/uddandam07/01repo/main/appfolder/azuredeploy.json'
-    overrideParameters: '-projectName arm'
+    overrideParameters: '-projectName arm01'
     deploymentMode: 'Incremental'
     deploymentName: 'deploypipelinetemplate'
